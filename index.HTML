@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus | Meu Tempo de Estudo</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <div>
+        <div class="logo">FOCUS<span>.</span></div>
+        <div class="subtitle">Disciplina, conhecimento e propósito.</div>
+      </div>
+      <div class="date" id="date"></div>
+    </header>
+
+    <section class="welcome">
+      <h1>Seu momento de evoluir.</h1>
+      <p>Grandes conquistas começam com pequenos passos todos os dias.</p>
+    </section>
+
+    <div class="main-grid">
+
+      <div>
+        <section class="card timer-card">
+          <div class="card-title">Sua sessão de estudos</div>
+
+          <div class="timer" id="timer">00:00:00</div>
+          <div class="timer-label" id="status">Pronto para começar?</div>
+
+          <div class="progress">
+            <div class="progress-bar" id="progress"></div>
+          </div>
+
+          <div class="goals">
+            <button class="goal active" onclick="setGoal(25,this)">25 min</button>
+            <button class="goal" onclick="setGoal(50,this)">50 min</button>
+            <button class="goal" onclick="setGoal(90,this)">90 min</button>
+            <button class="goal" onclick="setGoal(0,this)">Livre</button>
+          </div>
+
+          <div class="buttons">
+            <button class="start" id="start" onclick="toggleTimer()">▶ Iniciar</button>
+            <button class="reset" onclick="resetTimer()">↻ Zerar</button>
+          </div>
+        </section>
+
+        <div class="stats">
+          <div class="stat">
+            <strong id="total">0 min</strong>
+            <small>TEMPO DESTA SESSÃO</small>
+          </div>
+          <div class="stat">
+            <strong id="sessions">0</strong>
+            <small>METAS CONCLUÍDAS</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="side">
+
+        <section class="card">
+          <div class="card-title">Palavra para hoje · 📖</div>
+
+          <div class="verse">
+            <p id="verseText">
+              Tudo posso naquele que me fortalece.
+            </p>
+            <small id="verseRef">Filipenses 4:13</small>
+          </div>
+
+          <button class="change" onclick="nextVerse()">
+            ↻ Outro versículo
+          </button>
+        </section>
+
+        <section class="card">
+          <div class="card-title">Uma palavra de motivação</div>
+
+          <p class="quote" id="quote">
+            O segredo não está em fazer tudo de uma vez, mas em permanecer constante, mesmo quando ninguém está olhando.
+          </p>
+
+          <button class="change" onclick="nextQuote()">
+            ↻ Nova reflexão
+          </button>
+        </section>
+
+        <section class="card">
+          <div class="card-title">Lembre-se disso</div>
+          <p class="quote">
+            <strong>Seu futuro está sendo construído agora.</strong><br><br>
+            Cada página lida, cada exercício resolvido e cada hora dedicada representa um investimento em quem você deseja se tornar.
+          </p>
+        </section>
+
+      </div>
+    </div>
+
+    <footer>
+      Feito para estudar com propósito.
+      <span>Deus abençoe sua jornada.</span>
+    </footer>
+
+  </div>
+</body>
+</html>

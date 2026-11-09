@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+:root {
+  --bg: #101114;
+  --card: #191a1f;
+  --card2: #202127;
+  --gold: #c9a66b;
+  --text: #f4f1eb;
+  --muted: #92939b;
+  --border: #303137;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  padding: 35px 24px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CABEÇALHO */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 55px;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.date {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* APRESENTAÇÃO */
+
+.welcome {
+  margin-bottom: 28px;
+}
+
+.welcome h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 5vw, 38px);
+  font-weight: 500;
+}
+
+.welcome p {
+  color: var(--muted);
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* CARDS */
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  padding: 30px;
+}
+
+.card-title {
+  color: var(--muted);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+}
+
+/* CRONÔMETRO - LARGURA TOTAL */
+
+.timer-card {
+  width: 100%;
+  text-align: center;
+  padding: 45px 30px;
+}
+
+.timer {
+  font-size: clamp(65px, 12vw, 100px);
+  font-weight: 600;
+  letter-spacing: -5px;
+  font-variant-numeric: tabular-nums;
+  margin: 25px 0;
+}
+
+.timer-label {
+  color: var(--gold);
+  font-size: 14px;
+}
+
+.progress {
+  width: 100%;
+  max-width: 650px;
+  height: 6px;
+  background: #303137;
+  border-radius: 10px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: var(--gold);
+  transition: width .3s;
+}
+
+.goals {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.goal {
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  background: var(--card2);
+  color: var(--muted);
+  border-radius: 8px;
+}
+
+.goal:hover,
+.goal.active {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.start {
+  background: var(--gold);
+  color: #171717;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 9px;
+  font-weight: 700;
+}
+
+.start:hover {
+  background: #dfbd83;
+}
+
+.reset {
+  background: var(--card2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 14px 25px;
+  border-radius: 9px;
+}
+
+/* INDICADORES */
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+}
+
+.stat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  padding: 22px;
+  border-radius: 13px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 27px;
+  color: var(--gold);
+}
+
+.stat small {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* CONTEÚDO ABAIXO DO CRONÔMETRO */
+
+.side {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.side .card {
+  min-height: 220px;
+}
+
+/* VERSÍCULOS */
+
+.verse {
+  border-left: 2px solid var(--gold);
+  padding-left: 17px;
+}
+
+.verse p {
+  font-family: 'Playfair Display', serif;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+.verse small {
+  display: block;
+  color: var(--gold);
+  margin-top: 15px;
+}
+
+/* FRASES */
+
+.quote {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.quote strong {
+  color: var(--gold);
+}
+
+/* BOTÃO DE TROCA */
+
+.change {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--gold);
+  padding: 9px 14px;
+  border-radius: 7px;
+  margin-top: 18px;
+}
+
+.change:hover {
+  background: var(--card2);
+}
+
+/* RODAPÉ */
+
+footer {
+  text-align: center;
+  margin-top: 45px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer span {
+  color: var(--gold);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+  .side {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .side .card:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    padding: 25px 16px;
+  }
+
+  header {
+    margin-bottom: 40px;
+  }
+
+  .main-grid {
+    display: block;
+  }
+
+  .timer-card {
+    padding: 35px 15px;
+  }
+
+  .timer {
+    font-size: 57px;
+    letter-spacing: -3px;
+  }
+
+  .stats {
+    gap: 10px;
+  }
+
+  .stat {
+    padding: 16px 12px;
+  }
+
+  .side {
+    grid-template-columns: 1fr;
+  }
+
+  .side .card:last-child {
+    grid-column: auto;
+  }
+
+  .card {
+    padding: 23px 18px;
+  }
+}
